@@ -1,0 +1,32 @@
+"use strict";
+{
+
+    /*Alt + Z*/
+    /**
+     * 16. Crea una función para dibujar un patrón de diente de sierra inverso en un cuadro de texto.
+        Con un carácter y un número que indique el mayor número de caracteres en la base (inversa)
+        del patrón.
+        Ejemplo 1. Datos de entrada: 'A' y 5
+        AAAAA
+        AAAA
+        AAA
+        AA
+        A
+     */
+
+    const crearPatronDienteSierra = (letra, altura) => {
+        let cadena = ''
+        for (let index = altura; index > 0; index--) {
+            cadena = ''
+            for (let index2 = index; index2 > 0; index2--) {
+                cadena +=letra + ' '
+                
+            }
+            console.log(cadena)
+        }
+
+    }
+
+    crearPatronDienteSierra("D", 5)
+
+}
