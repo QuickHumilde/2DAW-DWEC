@@ -5,34 +5,12 @@
      */
 
     const delvolverObjetoArrayOrdenadosMayorMenor = (array) => {
-        let mayorMenor = array.sort((a,b) => {
-            if (a<b){
-                return 1;
-            }
-            if (a>b) {
-                return -1;
-            }
-            if (a===b){
-                return 0;
-            }
-        })
+        let mayorMenor = [...array].sort((a,b) => a<b?1:-1)
 
-        let menorMayor = array.sort((b,a) => {
-            if (a<b){
-                return 1;
-            }
-            if (a>b) {
-                return -1;
-            }
-            if (a===b){
-                return 0;
-            }
-        })
-
+        let menorMayor = [...array].sort((a,b) => a>b?1:-1)
         return {mayorMenor, menorMayor}
     }
 
     console.log(delvolverObjetoArrayOrdenadosMayorMenor([7,5,7,8,6]));
-
 
 }
