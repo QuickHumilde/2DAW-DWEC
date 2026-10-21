@@ -54,6 +54,7 @@
 
         if (numerin%2 ===0){
             pares.push(numerin);
+
         } else {
             impares.push(numerin);
         }
