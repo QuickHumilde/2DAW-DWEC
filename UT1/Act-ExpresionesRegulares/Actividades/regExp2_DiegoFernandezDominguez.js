@@ -6,9 +6,8 @@
      */
 
     const extractNumberFromString = (text) => {
-        let regExp = /[0-9]g/;
+        let regExp = /[0-9]+(?:\.[0-9]+)?/g;
         
-        regExp.test(text);
         return text.match(regExp);
     };
 
