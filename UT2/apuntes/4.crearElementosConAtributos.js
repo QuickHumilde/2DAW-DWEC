@@ -39,4 +39,65 @@
     console.log(nuevoDiv);
     document.body.append(nuevoDiv);
     
+    //03/11/2026
+    //Eliminar atributos: removeAttribute y removeAttributeNode
+
+    nuevoParrafo.setAttribute("saludar","hola");
+    nuevoParrafo.setAttribute("insultar","feo");
+    nombreAtributos=nuevoParrafo.getAttributeNames();
+    console.log(nombreAtributos);
+    nuevoParrafo.removeAttribute("saludar");
+    nombreAtributos=nuevoParrafo.getAttributeNames();
+    console.log(nombreAtributos);
+
+    let atributoNodoEliminado = nuevoParrafo.removeAttributeNode(nuevoParrafo.getAttributeNode("insultar"));
+    nombreAtributos=nuevoParrafo.getAttributeNames();
+    console.log(nombreAtributos);
+
+    let attr1 = nuevoParrafo.getAttributeNode("id"); //id = "idP2"
+    let attr2 = nuevoParrafo.getAttribute("id");//idP2
+    let attr3 = nuevoParrafo.id; //idP2
+    console.log(attr1);
+    console.log(attr2);
+    console.log(attr3);
+
+    // Atributos data
+    let enlace = document.querySelector(".enlace");
+    enlace.setAttribute("data-fono","cobrar dinero");
+    enlace.setAttribute("data-description","chulako bellako");
+    console.log(enlace.dataset);
+    enlace.dataset.description = "hoy es martes";
+    console.log(enlace.dataset);
+    console.log(enlace.getAttribute("data-id"));
+
+    // Atributos CSS
+    console.log(enlace.style);
+    console.log(enlace.style.backgroundColor);
+    console.log(enlace.style.color);
+
+    enlace.style.setProperty("text-decoration","none");
+    enlace.style.textDecoration = "underline";
+    enlace.style.setProperty("background-color","blue");
+    enlace.style.display = "inline-block";
+    enlace.style.width = "50%";
+    enlace.style.textAlign = "right";
+
+    let hmtl = document.documentElement;
+    hmtl.style.backgroundColor = "#adea90";
+
+    // classList.add .remove .toggle .contains
+    let myH3 = document.querySelector("#idH3");
+    myH3.classList.add("cUno");
+    myH3.classList.add("cDos");
+    console.log(myH3.classList);
+    myH3.classList.remove("cDos");
+    console.log(myH3.classList);
+    myH3.classList.toggle("cUno"); // si existe la elimina; si no existe, la añade
+    myH3.classList.toggle("cUno");
+    console.log(myH3.classList[0]);
+    console.log(myH3.classList.item(1));
+    console.log(myH3.classList.contains("cUno"));
+    console.log(myH3.classList.contains("cDos"));
+    myH3.classList.replace("cUno", "cDos");
+
 }
