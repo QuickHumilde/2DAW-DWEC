@@ -10,9 +10,7 @@
 
     const restablecerNumero = () => {
         contenedor.innerHTML = "";
-
         let tabla = document.createElement("table");
-
         let numero = 1;
 
         for (let i = 0; i < FILAS; i++) {
@@ -22,22 +20,17 @@
                 let celda = document.createElement("td");
                 celda.innerHTML = numero;
                 celda.setAttribute("class", "normal");
-
                 fila.append(celda);
                 numero++;
             }
-
             tabla.append(fila);
         }
-
         contenedor.append(tabla);
     }
 
     const calcularPrimos = () => {
         contenedor.innerHTML = "";
-
         let tabla = document.createElement("table");
-
         let numero = 1;
 
         for (let i = 0; i < FILAS; i++) {
@@ -49,6 +42,7 @@
 
                 if (esPrimo(numero)) {
                     celda.setAttribute("class", "primo");
+                    
                 } else {
                     celda.setAttribute("class", "normal");
                 }
@@ -56,10 +50,8 @@
                 fila.append(celda);
                 numero++;
             }
-
             tabla.append(fila);
         }
-
         contenedor.append(tabla);
     }
 
@@ -73,7 +65,6 @@
                 return false;
             }
         }
-
         return true;
     }
 
